@@ -1,0 +1,4 @@
+backend/
+react-app/
+*.env
+*.zip
