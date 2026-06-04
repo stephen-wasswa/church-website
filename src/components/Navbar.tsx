@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,25 @@ export default function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
+
+  // Lock body scroll when mobile nav is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   return (
     <>
@@ -57,7 +77,7 @@ export default function Navbar() {
           aria-label="Close menu"
           onClick={() => setIsOpen(false)}
         >
-          <i className="fa-solid fa-xmark"></i>
+          <X size={20} strokeWidth={2} />
         </button>
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/about">Our Story</NavLink>

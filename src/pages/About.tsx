@@ -1,7 +1,65 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
+
+const beliefs = [
+  {
+    num: "01",
+    title: "The Bible",
+    content: "We believe the Bible — Old and New Testaments — is the inspired, infallible, and authoritative Word of God, God-breathed and the complete authority for faith and practice.",
+    ref: "2 Timothy 3:16–17 · 2 Peter 1:21"
+  },
+  {
+    num: "02",
+    title: "God",
+    content: "We believe in one God — Creator of all — revealed in three distinct Persons: Father, Son, and Holy Spirit. He is eternal, infinite, sovereign, holy, just, and love.",
+    ref: "Deuteronomy 6:4 · 1 John 4:8"
+  },
+  {
+    num: "03",
+    title: "Jesus Christ",
+    content: "We believe in the deity of Jesus Christ — God incarnate, born of a virgin, fully God and fully man. He died for all, rose bodily, and is now seated at the Father's right hand.",
+    ref: "John 1:18 · Matthew 28:6"
+  },
+  {
+    num: "04",
+    title: "The Holy Spirit",
+    content: "We believe in the deity and personality of the Holy Spirit — who regenerates sinners, indwells believers, and distributes spiritual gifts as He wills.",
+    ref: "Acts 5:3–4 · 1 Corinthians 12:11"
+  },
+  {
+    num: "05",
+    title: "Salvation by Grace",
+    content: "We believe salvation is a gift of God's grace through faith in the finished work of Jesus — by grace alone, through faith alone, in Christ alone. Eternal and secure.",
+    ref: "Ephesians 2:8–9 · John 10:28"
+  },
+  {
+    num: "06",
+    title: "The Baptism in the Holy Spirit",
+    content: "We believe in the baptism in the Holy Spirit as a distinct experience subsequent to salvation — empowering believers for service, often accompanied by speaking in tongues.",
+    ref: "Acts 2:4 · Acts 1:8"
+  },
+  {
+    num: "07",
+    title: "The Church",
+    content: "We believe the Church is the body of Christ, composed of all believers, called to worship God, evangelise the world, and serve one another — empowered by the Holy Spirit.",
+    ref: "Matthew 28:19–20 · 1 Corinthians 12:12–27"
+  },
+  {
+    num: "08",
+    title: "The Second Coming",
+    content: "We believe in the imminent, literal, and visible return of Jesus Christ to gather His Church — bringing final judgment and the fulfilment of all God's promises.",
+    ref: "1 Thessalonians 4:16–17 · Revelation 1:7"
+  }
+];
 
 export default function About() {
+  const [activeBelief, setActiveBelief] = useState<number | null>(null);
+
+  const toggleBelief = (idx: number) => {
+    setActiveBelief((prev) => (prev === idx ? null : idx));
+  };
   return (
     <>
       <Helmet>
@@ -193,54 +251,33 @@ export default function About() {
           <p>Our faith is grounded in the unchanging truth of Scripture — shaping everything we do and everything we are.</p>
         </div>
         <div className="beliefs-grid">
-          <div className="belief-card reveal">
-            <div className="belief-num">01</div>
-            <h3>The Bible</h3>
-            <p>We believe the Bible — Old and New Testaments — is the inspired, infallible, and authoritative Word of God, God-breathed and the complete authority for faith and practice.</p>
-            <span className="belief-ref">2 Timothy 3:16–17 · 2 Peter 1:21</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.06s'} as any}>
-            <div className="belief-num">02</div>
-            <h3>God</h3>
-            <p>We believe in one God — Creator of all — revealed in three distinct Persons: Father, Son, and Holy Spirit. He is eternal, infinite, sovereign, holy, just, and love.</p>
-            <span className="belief-ref">Deuteronomy 6:4 · 1 John 4:8</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.12s'} as any}>
-            <div className="belief-num">03</div>
-            <h3>Jesus Christ</h3>
-            <p>We believe in the deity of Jesus Christ — God incarnate, born of a virgin, fully God and fully man. He died for all, rose bodily, and is now seated at the Father's right hand.</p>
-            <span className="belief-ref">John 1:18 · Matthew 28:6</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.18s'} as any}>
-            <div className="belief-num">04</div>
-            <h3>The Holy Spirit</h3>
-            <p>We believe in the deity and personality of the Holy Spirit — who regenerates sinners, indwells believers, and distributes spiritual gifts as He wills.</p>
-            <span className="belief-ref">Acts 5:3–4 · 1 Corinthians 12:11</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.24s'} as any}>
-            <div className="belief-num">05</div>
-            <h3>Salvation by Grace</h3>
-            <p>We believe salvation is a gift of God's grace through faith in the finished work of Jesus — by grace alone, through faith alone, in Christ alone. Eternal and secure.</p>
-            <span className="belief-ref">Ephesians 2:8–9 · John 10:28</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.30s'} as any}>
-            <div className="belief-num">06</div>
-            <h3>The Baptism in the Holy Spirit</h3>
-            <p>We believe in the baptism in the Holy Spirit as a distinct experience subsequent to salvation — empowering believers for service, often accompanied by speaking in tongues.</p>
-            <span className="belief-ref">Acts 2:4 · Acts 1:8</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.36s'} as any}>
-            <div className="belief-num">07</div>
-            <h3>The Church</h3>
-            <p>We believe the Church is the body of Christ, composed of all believers, called to worship God, evangelise the world, and serve one another — empowered by the Holy Spirit.</p>
-            <span className="belief-ref">Matthew 28:19–20 · 1 Corinthians 12:12–27</span>
-          </div>
-          <div className="belief-card reveal" style={{'--delay': '0.42s'} as any}>
-            <div className="belief-num">08</div>
-            <h3>The Second Coming</h3>
-            <p>We believe in the imminent, literal, and visible return of Jesus Christ to gather His Church — bringing final judgment and the fulfilment of all God's promises.</p>
-            <span className="belief-ref">1 Thessalonians 4:16–17 · Revelation 1:7</span>
-          </div>
+          {beliefs.map((belief, idx) => (
+            <div
+              key={belief.num}
+              className={`belief-card reveal ${activeBelief === idx ? 'is-active' : ''}`}
+              style={{ '--delay': `${0.06 * idx}s` } as any}
+              onClick={() => toggleBelief(idx)}
+            >
+              <button
+                className="belief-card-toggle"
+                aria-expanded={activeBelief === idx}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleBelief(idx);
+                }}
+              >
+                <div className="belief-card-header-left">
+                  <div className="belief-num">{belief.num}</div>
+                  <h3>{belief.title}</h3>
+                </div>
+                <ChevronDown className="belief-card-arrow" size={18} />
+              </button>
+              <div className="belief-card-content">
+                <p>{belief.content}</p>
+                <span className="belief-ref">{belief.ref}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -6,6 +6,8 @@ export interface Sermon {
   description: string;
   videoUrl?: string;
   audioUrl?: string;
+  thumbnailUrl?: string;
+  series?: string;
 }
 
 export interface ChurchEvent {
