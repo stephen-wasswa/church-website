@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Kasenge Miracle Centre Church — Alimunze. A Christ-centred home where lives are built, purpose is discovered, and destinies are shaped. Located in Kasenge, Wakiso District, Uganda." />
+  <title>Alimunze — Kasenge Miracle Centre Church</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="site-header">
+    <a href="index.html" class="logo" aria-label="Alimunze - Kasenge Miracle Centre Church">
+      <img src="logo.png" alt="KMC Logo" class="logo-img" />
+    </a>
+    <ul class="nav-links" role="navigation" aria-label="Main navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="ministries.html">Get Involved</a></li>
+      <li><a href="sermons.html">Watch &amp; Listen</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li><a href="join-us.html" class="nav-cta">I'm New Here</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-overlay" id="overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <button class="close-btn" id="close-nav" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="ministries.html">Get Involved</a>
+    <a href="sermons.html">Watch &amp; Listen</a>
+    <a href="give.html">Give</a>
+    <a href="join-us.html" class="mobile-cta">I'm New Here</a>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome to Alimunze">
+    <div class="slides" aria-hidden="true">
+      <div class="slide slide-1 active"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+      <div class="slide slide-4"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-fade-bottom" aria-hidden="true"></div>
+    <div class="hero-accent" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">Kasenge · Wakiso · Uganda · Est. 1992</span>
+      </div>
+      <h1 class="hero-headline">
+        This Is Your<br />
+        <span class="hero-rotate-wrap" aria-live="polite" aria-label="Place to grow, heal, and belong" id="word-wrap">
+          <span class="hero-rotate-word active">Place to Grow.</span>
+          <span class="hero-rotate-word">Place to Heal.</span>
+          <span class="hero-rotate-word">Place to Belong.</span>
+          <span class="hero-rotate-word">Home.</span>
+        </span>
+      </h1>
+      <p class="hero-para">
+        You don't have to have it all together to belong here. Come as you are —
+        discover who you were always meant to be. The finished work of Christ is enough.
+        <em>You are enough.</em>
+      </p>
+      <div class="hero-ctas">
+        <a href="join-us.html" class="btn-primary">
+          I'm New — Plan My Visit
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="https://youtube.com/@robinahntambiministries" target="_blank" rel="noopener" class="btn-ghost">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          Watch Online
+        </a>
+      </div>
+    </div>
+
+    <div class="slide-dots" aria-label="Slideshow controls">
+      <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="dot" data-index="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-track">
+        <div class="scroll-bar"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- WELCOME STRIP -->
+  <div class="welcome-strip" id="welcome">
+    <div class="strip-left">
+      <p class="sec-label reveal">Welcome Home</p>
+      <h2 class="reveal" style="--delay:0.1s">A church built<br />for <span>real people.</span></h2>
+      <p class="reveal" style="--delay:0.2s">
+        Whatever you're carrying — questions, wounds, dreams, or a fresh start —
+        there's a seat here for you. Alimunze isn't a performance. It's a family,
+        rooted in the Word and powered by the Spirit.
+      </p>
+      <a href="about.html" class="text-link reveal" style="--delay:0.3s">
+        Discover our story
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="strip-right">
+      <a href="join-us.html" class="strip-card">
+        <p class="card-title">First Time Here?</p>
+        <p class="card-desc">We'd love to welcome you. Here's what to expect on your first Sunday at Alimunze.</p>
+        <span class="card-link">Plan your visit <i class="fa-solid fa-arrow-right" style="font-size:0.5rem"
+            aria-hidden="true"></i></span>
+      </a>
+      <a href="sermons.html" class="strip-card">
+        <p class="card-title">Watch &amp; Listen</p>
+        <p class="card-desc">Catch up on recent teachings from Pastor Robinah — wherever you are, the Word reaches you.
+        </p>
+        <span class="card-link">Browse sermons <i class="fa-solid fa-arrow-right" style="font-size:0.5rem"
+            aria-hidden="true"></i></span>
+      </a>
+      <a href="ministries.html" class="strip-card">
+        <p class="card-title">Get Involved</p>
+        <p class="card-desc">Men, women, youth, children — there's a vibrant community here for every season of life.
+        </p>
+        <span class="card-link">Explore ministries <i class="fa-solid fa-arrow-right" style="font-size:0.5rem"
+            aria-hidden="true"></i></span>
+      </a>
+      <a href="#prayer-modal" class="strip-card" id="open-prayer">
+        <p class="card-title">Send a Prayer</p>
+        <p class="card-desc">We don't just pray for you — we pray with you. Share your need and let us stand with you.
+        </p>
+        <span class="card-link">Submit request <i class="fa-solid fa-arrow-right" style="font-size:0.5rem"
+            aria-hidden="true"></i></span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- MISSION PULSE -->
+  <section class="mission-pulse" aria-label="Our assignment">
+    <div class="mp-left reveal">
+      <p class="sec-label" style="color:rgba(237,232,224,0.45)">Our Assignment</p>
+      <h2>The finished work<br />of Christ<br /><em>is enough.</em></h2>
+    </div>
+    <div class="mp-right reveal" style="--delay:0.15s">
+      <blockquote class="mp-quote">
+        "Our assignment is to lead God's people into an effortless rest — by knowing and believing what Jesus did for
+        them instead of struggling in life."
+      </blockquote>
+      <p class="mp-body">
+        If you understand the finished work of Christ, you can enter the effortless rest. The debt was fully paid,
+        the sentence was fully served, and the battle was fully won. This is the message of Alimunze.
+      </p>
+      <div class="mp-pillars">
+        <span class="mp-pill">Grace</span>
+        <span class="mp-pill">Word</span>
+        <span class="mp-pill">Spirit</span>
+        <span class="mp-pill">Community</span>
+      </div>
+      <a href="about.html" class="text-link" style="color:var(--gold); border-color:rgba(201,169,110,0.3)">
+        Read our full story
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- PHOTO GALLERY -->
+  <section class="gallery-strip">
+    <div class="gallery-header reveal">
+      <p class="sec-label sec-label--dark">Life at Alimunze</p>
+      <h2>A Glimpse of Our Community</h2>
+      <p>From worship to outreach, from children to elders — this is the family of Kasenge Miracle Centre Church.</p>
+    </div>
+    <div class="gallery-grid reveal" style="--delay:0.1s">
+      <div class="gallery-item tall">
+        <img src="congregation-3.jpg" alt="KMC congregation gathered in worship" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="choir.jpg" alt="KMC women's choir in blue" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="youth.jpg" alt="KMC youth ministry outing" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="worship.jpg" alt="Men in worship at KMC" loading="lazy" />
+      </div>
+      <div class="gallery-item">
+        <img src="children.jpg" alt="KMC children in Bible class" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PASTOR -->
+  <section class="pastor-section" id="pastor">
+    <div class="pastor-image-col reveal">
+      <img src="pastor-robinah.jpg"
+        alt="Pastor Robinah Ntambi Namutebi — Senior Pastor and Founder of Kasenge Miracle Centre Church"
+        loading="lazy" />
+    </div>
+    <div class="pastor-text-col reveal" style="--delay:0.2s">
+      <p class="sec-label">Our Leadership</p>
+      <h2 class="pastor-name">Pastor Robinah<br />Ntambi Namutebi</h2>
+      <p class="pastor-title-tag">Senior Pastor &amp; Founder · Kasenge Miracle Centre Church</p>
+      <blockquote class="pastor-quote">
+        "Our assignment is to lead God's people into an effortless rest — by knowing and believing what Jesus did for
+        them instead of struggling in life."
+      </blockquote>
+      <p class="pastor-bio">
+        Founded in July 1992 under Rubaga Miracle Centre Ministry and commissioned by Pastor Robert Kayanja,
+        what began in a small room has grown into a life-transforming church touching generations in Kasenge,
+        Wakiso District and beyond.
+      </p>
+      <a href="about.html#pastor" class="btn-primary" style="width:fit-content; margin-top:1.5rem">
+        Meet Pastor Robinah
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- SERVICE TIMES -->
+  <section class="service-times-home" aria-label="Service times">
+    <div class="sth-inner">
+      <div class="sth-label reveal">
+        <p class="sec-label">Join Us This Week</p>
+        <h2 class="reveal" style="--delay:0.08s">Every gathering<br /><em>is a fresh start.</em></h2>
+        <p class="sth-sub reveal" style="--delay:0.16s">
+          Kasenge, along Nakawuka Road<br />Wakiso District, Uganda
+        </p>
+        <a href="join-us.html" class="btn-primary reveal" style="--delay:0.24s; width:fit-content; margin-top:1.8rem">
+          Plan My Visit
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+      <div class="sth-times reveal" style="--delay:0.12s">
+        <div class="sth-item">
+          <div class="sth-day-block">
+            <span class="sth-day">Sunday</span>
+            <span class="sth-type">Main Service</span>
+          </div>
+          <span class="sth-time">8:00 <small>AM</small></span>
+        </div>
+        <div class="sth-item">
+          <div class="sth-day-block">
+            <span class="sth-day">Wednesday</span>
+            <span class="sth-type">Midweek Bible Study</span>
+          </div>
+          <span class="sth-time">5:00 <small>PM</small></span>
+        </div>
+        <div class="sth-item">
+          <div class="sth-day-block">
+            <span class="sth-day">Friday</span>
+            <span class="sth-type">Prayer &amp; Intercession</span>
+          </div>
+          <span class="sth-time">6:00 <small>PM</small></span>
+        </div>
+        <div class="sth-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          All are welcome. Children's ministry runs during the main service.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOCIAL MEDIA -->
+  <section class="social-section" id="connect">
+    <div class="social-header reveal">
+      <p class="sec-label">Stay Connected</p>
+      <h2>Follow Us Online</h2>
+      <p>The Word has no walls. Join our growing online community and stay connected wherever you are in the world.</p>
+    </div>
+    <div class="social-grid reveal" style="--delay:0.1s">
+      <a href="https://youtube.com/@robinahntambiministries" target="_blank" rel="noopener" class="social-card yt">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        <span class="soc-platform">YouTube</span>
+        <span class="soc-handle">@robinahntambiministries</span>
+      </a>
+      <a href="https://www.facebook.com/PastorRobinah" target="_blank" rel="noopener" class="social-card fb">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        <span class="soc-platform">Facebook</span>
+        <span class="soc-handle">PastorRobinah</span>
+      </a>
+      <a href="https://www.tiktok.com/@ali_munze" target="_blank" rel="noopener" class="social-card tt">
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        <span class="soc-platform">TikTok</span>
+        <span class="soc-handle">@ali_munze</span>
+      </a>
+      <a href="https://www.instagram.com/ali_munze/" target="_blank" rel="noopener" class="social-card ig">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        <span class="soc-platform">Instagram</span>
+        <span class="soc-handle">@ali_munze</span>
+      </a>
+      <a href="https://x.com/ali_munze" target="_blank" rel="noopener" class="social-card xw">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        <span class="soc-platform">Twitter / X</span>
+        <span class="soc-handle">@ali_munze</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" aria-label="Your next step">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <div class="cta-overlay" aria-hidden="true"></div>
+    <div class="cta-accent-lines" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="cta-inner reveal">
+      <p class="sec-label">Your Next Step</p>
+      <h2>There is a seat here<br />with <em>your name on it.</em></h2>
+      <p>
+        Come as you are. Every Sunday is a new beginning — no conditions, no performance required.
+        We have been expecting you, and we are ready to walk with you every step of the way.
+      </p>
+      <div class="cta-action-row">
+        <a href="join-us.html" class="cta-action-card">
+          <span class="cac-label">Plan My Visit</span>
+          <span class="cac-sub">Join us this Sunday</span>
+        </a>
+        <a href="#prayer-modal" class="cta-action-card" id="open-prayer-2">
+          <span class="cac-label">Send a Prayer</span>
+          <span class="cac-sub">We stand with you</span>
+        </a>
+        <a href="give.html" class="cta-action-card">
+          <span class="cac-label">Give &amp; Partner</span>
+          <span class="cac-sub">Sow into the mission</span>
+        </a>
+        <a href="sermons.html" class="cta-action-card">
+          <span class="cac-label">Watch a Sermon</span>
+          <span class="cac-sub">Start from anywhere</span>
+        </a>
+      </div>
+      <p class="cta-location-tag">
+        <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
+        Kasenge, along Nakawuka Road · Wakiso District, Uganda ·
+        <a href="tel:+256778815396">+256 778 815 396</a>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="logo.png" alt="KMC Alimunze Logo" class="footer-logo-img" />
+        </div>
+        <p class="footer-desc">Kasenge Miracle Centre Church — Alimunze. Building lives, repairing the broken, and
+          restoring generations since 1992.</p>
+        <div class="footer-socials">
+          <a href="https://youtube.com/@robinahntambiministries" target="_blank" rel="noopener" aria-label="YouTube"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/PastorRobinah" target="_blank" rel="noopener" aria-label="Facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@ali_munze" target="_blank" rel="noopener" aria-label="TikTok"><i
+              class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/ali_munze/" target="_blank" rel="noopener" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/ali_munze" target="_blank" rel="noopener" aria-label="Twitter/X"><i
+              class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Navigate</p>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="beliefs.html">What We Believe</a></li>
+          <li><a href="ministries.html">Get Involved</a></li>
+          <li><a href="sermons.html">Watch &amp; Listen</a></li>
+          <li><a href="give.html">Give &amp; Partner</a></li>
+          <li><a href="join-us.html">Plan a Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Reach Us</p>
+        <ul>
+          <li><a href="#prayer-modal" id="footer-prayer">Send a Prayer</a></li>
+          <li><a href="join-us.html">Contact the Church</a></li>
+          <li><a href="tel:+256778815396">+256 778 815 396 (MTN)</a></li>
+          <li><a href="tel:+256703989948">+256 703 989 948 (Airtel)</a></li>
+          <li><a href="mailto:info@kasengemiraclecentre.org">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Kasenge Miracle Centre Church · Alimunze. All rights reserved.</p>
+      <p class="footer-tagline">"Building lives. Shaping destinies."</p>
+    </div>
+  </footer>
+
+
+  <!-- PRAYER MODAL -->
+  <div class="modal-backdrop" id="prayer-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close prayer request form">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="sec-label" style="color:var(--gold)">We Pray With You</p>
+      <h3 id="modal-heading">Send Your Prayer Request</h3>
+      <p>Share your need and our prayer team will stand with you in faith.</p>
+      <div class="modal-field">
+        <label for="prayer-name">Your Name</label>
+        <input type="text" id="prayer-name" placeholder="e.g. John Ssemwanga" autocomplete="given-name" />
+      </div>
+      <div class="modal-field">
+        <label for="prayer-request">Your Prayer Request</label>
+        <textarea id="prayer-request" placeholder="Share what's on your heart..."></textarea>
+      </div>
+      <button class="modal-submit" id="submit-prayer">Send Prayer Request</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

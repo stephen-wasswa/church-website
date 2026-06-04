@@ -1,0 +1,6 @@
+{
+  "name": "Alimunze Church",
+  "description": "A modern React-based church website with a CMS for sermons and calendar events. Designed for Kasenge Miracle Centre Church.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
