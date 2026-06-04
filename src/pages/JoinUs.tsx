@@ -92,7 +92,7 @@ export default function JoinUs() {
           </div>
 
           <div className="service-image reveal" style={{'--delay': '0.15s'} as any}>
-            <img src="/church-building.jpg" alt="Kasenge Miracle Centre Church building" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}church-building.jpg`} alt="Kasenge Miracle Centre Church building" loading="lazy" />
             <span className="service-image-tag">Kasenge, Wakiso District</span>
           </div>
         </div>

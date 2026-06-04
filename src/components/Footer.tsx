@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div>
           <div className="footer-logo">
-            <img src="/logo.png" alt="KMC Alimunze Logo" className="footer-logo-img" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="KMC Alimunze Logo" className="footer-logo-img" />
           </div>
           <p className="footer-desc">Kasenge Miracle Centre Church — Alimunze. Building lives, repairing the broken, and
             restoring generations since 1992.</p>

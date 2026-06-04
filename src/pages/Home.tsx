@@ -202,19 +202,19 @@ export default function Home() {
         </div>
         <div className="gallery-grid reveal" style={{ '--delay': '0.1s' } as any}>
           <div className="gallery-item tall">
-            <img src="/congregation-3.jpg" alt="KMC congregation gathered in worship" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}congregation-3.jpg`} alt="KMC congregation gathered in worship" loading="lazy" />
           </div>
           <div className="gallery-item">
-            <img src="/choir.jpg" alt="KMC women's choir in blue" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}choir.jpg`} alt="KMC women's choir in blue" loading="lazy" />
           </div>
           <div className="gallery-item">
-            <img src="/youth.jpg" alt="KMC youth ministry outing" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}youth.jpg`} alt="KMC youth ministry outing" loading="lazy" />
           </div>
           <div className="gallery-item">
-            <img src="/worship.jpg" alt="Men in worship at KMC" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}worship.jpg`} alt="Men in worship at KMC" loading="lazy" />
           </div>
           <div className="gallery-item">
-            <img src="/children.jpg" alt="KMC children in Bible class" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}children.jpg`} alt="KMC children in Bible class" loading="lazy" />
           </div>
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function Home() {
       {/* PASTOR */}
       <section className="pastor-section" id="pastor">
         <div className="pastor-image-col reveal">
-          <img src="/pastor-robinah.jpg"
+          <img src={`${import.meta.env.BASE_URL}pastor-robinah.jpg`}
             alt="Pastor Robinah Ntambi Namutebi — Senior Pastor and Founder of Kasenge Miracle Centre Church"
             loading="lazy" />
         </div>

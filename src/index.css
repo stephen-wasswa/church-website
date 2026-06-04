@@ -486,19 +486,19 @@
   }
 
   .slide-1 {
-    background-image: url('congregation-2.jpg'), linear-gradient(135deg, #4A0F1B, #161213);
+    background-image: url('/congregation-2.jpg'), linear-gradient(135deg, #4A0F1B, #161213);
   }
 
   .slide-2 {
-    background-image: url('congregation-1.jpg'), linear-gradient(135deg, #221D1E, #4A0F1B);
+    background-image: url('/congregation-1.jpg'), linear-gradient(135deg, #221D1E, #4A0F1B);
   }
 
   .slide-3 {
-    background-image: url('worship.jpg'), linear-gradient(135deg, #6B1A2A, #0E0C0C);
+    background-image: url('/worship.jpg'), linear-gradient(135deg, #6B1A2A, #0E0C0C);
   }
 
   .slide-4 {
-    background-image: url('church-building.jpg'), linear-gradient(135deg, #4A0F1B, #0E0C0C);
+    background-image: url('/church-building.jpg'), linear-gradient(135deg, #4A0F1B, #0E0C0C);
   }
 
   .hero-overlay {
@@ -1740,7 +1740,7 @@
   .cta-bg {
     position: absolute;
     inset: 0;
-    background-image: url('congregation-4.jpg'), linear-gradient(135deg, var(--maroon-deep), var(--black));
+    background-image: url('/congregation-4.jpg'), linear-gradient(135deg, var(--maroon-deep), var(--black));
     background-size: cover;
     background-position: center 30%;
     z-index: 0;
@@ -2513,38 +2513,38 @@
 
 /*page heros*/
 #about-page{
-  background-image: url('congregation-5.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/congregation-5.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }
 
 #ministries-page{
-  background-image: url('youth.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/youth.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }
 
 #sermons-page{
-  background-image: url('pastor.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/pastor.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }
 
 #give-page{
-  background-image: url('community.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/community.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }
 
 
 #join-us-page{
-  background-image: url('congregation-3.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/congregation-3.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }
 
 #prayer-page{
-  background-image: url('worship.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
+  background-image: url('/worship.jpg'), linear-gradient(135deg, #4A0F1B, #6B1A2A);
   background-size: cover;
   background-position: center;
 }

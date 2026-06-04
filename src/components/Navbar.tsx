@@ -23,7 +23,7 @@ export default function Navbar() {
     <>
       <header id="site-header" className={scrolled ? "scrolled" : ""}>
         <Link to="/" className="logo" aria-label="Alimunze - Kasenge Miracle Centre Church">
-          <img src="/logo.png" alt="KMC Logo" className="logo-img" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="KMC Logo" className="logo-img" />
         </Link>
         <ul className="nav-links" role="navigation" aria-label="Main navigation">
           <li><NavLink to="/" end>Home</NavLink></li>

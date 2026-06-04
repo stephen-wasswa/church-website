@@ -40,28 +40,28 @@ export default function Ministries() {
         </div>
         <div className="strip-right">
           <div className="strip-card has-image">
-            <img src="/evangelism.jpg" alt="Evangelism" className="strip-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}evangelism.jpg`} alt="Evangelism" className="strip-card-img" loading="lazy" />
             <div className="strip-card-overlay" aria-hidden="true"></div>
             <p className="card-title">Evangelism</p>
             <p className="card-desc">Reaching the world around us with the gospel of Jesus Christ — because the message belongs to everyone.</p>
             <span className="card-link">Matthew 28:19</span>
           </div>
           <div className="strip-card has-image">
-            <img src="/congregation-1.jpg" alt="Discipleship" className="strip-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}congregation-1.jpg`} alt="Discipleship" className="strip-card-img" loading="lazy" />
             <div className="strip-card-overlay" aria-hidden="true"></div>
             <p className="card-title">Discipleship</p>
             <p className="card-desc">Teaching believers to become less self-centred and more like Christ — imitators of His grace and truth.</p>
             <span className="card-link">Ephesians 4:11–12</span>
           </div>
           <div className="strip-card has-image">
-            <img src="/congregation-2.jpg" alt="Fellowship" className="strip-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}congregation-2.jpg`} alt="Fellowship" className="strip-card-img" loading="lazy" />
             <div className="strip-card-overlay" aria-hidden="true"></div>
             <p className="card-title">Fellowship</p>
             <p className="card-desc">Building relationships within the KMC family — creating unity, love, and purpose for every member.</p>
             <span className="card-link">Acts 2:42–47</span>
           </div>
           <div className="strip-card has-image">
-            <img src="/worship.jpg" alt="Worship & Praise" className="strip-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}worship.jpg`} alt="Worship & Praise" className="strip-card-img" loading="lazy" />
             <div className="strip-card-overlay" aria-hidden="true"></div>
             <p className="card-title">Worship &amp; Praise</p>
             <p className="card-desc">Acknowledging God through song, testimony, obedience, and proclamation — led by Pastor Sam Kakembo.</p>
@@ -84,7 +84,7 @@ export default function Ministries() {
 
         <div className="min-grid">
           <div className="min-card reveal">
-            <img src="/men.jpg" alt="Men's Ministry at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}men.jpg`} alt="Men's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">01 · Ministry</p>
@@ -96,7 +96,7 @@ export default function Ministries() {
           </div>
 
           <div className="min-card reveal" style={{'--delay': '0.07s'} as any}>
-            <img src="/women.jpg" alt="Women's Ministry at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}women.jpg`} alt="Women's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">02 · Ministry</p>
@@ -108,7 +108,7 @@ export default function Ministries() {
           </div>
 
           <div className="min-card reveal" style={{'--delay': '0.14s'} as any}>
-            <img src="/youth.jpg" alt="Youth Ministry at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}youth.jpg`} alt="Youth Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">03 · Ministry</p>
@@ -120,7 +120,7 @@ export default function Ministries() {
           </div>
 
           <div className="min-card reveal" style={{'--delay': '0.21s'} as any}>
-            <img src="/children.jpg" alt="Children's Ministry at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}children.jpg`} alt="Children's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">04 · Ministry</p>
@@ -132,7 +132,7 @@ export default function Ministries() {
           </div>
 
           <div className="min-card reveal" style={{'--delay': '0.28s'} as any}>
-            <img src="/choir.jpg" alt="Worship team at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}choir.jpg`} alt="Worship team at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">05 · Ministry</p>
@@ -144,7 +144,7 @@ export default function Ministries() {
           </div>
 
           <div className="min-card reveal" style={{'--delay': '0.35s'} as any}>
-            <img src="/community.jpg" alt="Community outreach at Alimunze" className="min-card-img" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}community.jpg`} alt="Community outreach at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">06 · Ministry</p>

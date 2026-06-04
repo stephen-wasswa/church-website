@@ -111,7 +111,7 @@ export default function About() {
       {/* PASTOR */}
       <section className="pastor-section" id="pastor">
         <div className="pastor-image-col reveal">
-          <img src="/pastor-robinah.jpg"
+          <img src={`${import.meta.env.BASE_URL}pastor-robinah.jpg`}
             alt="Pastor Robinah Ntambi Namutebi — Senior Pastor and Founder, Kasenge Miracle Centre Church"
             loading="lazy" />
         </div>

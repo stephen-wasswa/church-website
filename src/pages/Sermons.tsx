@@ -73,7 +73,7 @@ export default function Sermons() {
         {sermons.length > 0 && (
           <div className="sermons-featured reveal" style={{'--delay': '0.1s'} as any}>
             <div className="sermon-featured-img">
-              <img src="/pastor.jpg" alt="Featured sermon" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}pastor.jpg`} alt="Featured sermon" loading="lazy" />
               <span className="sermon-featured-badge">Latest Message</span>
             </div>
             <div className="sermon-featured-body">
@@ -105,7 +105,7 @@ export default function Sermons() {
             sermons.slice(1).map((sermon, idx) => (
               <a key={sermon.id} href={sermon.videoUrl || '#'} target="_blank" rel="noopener noreferrer" className="sermon-card reveal" style={{'--delay': `${0.06 * (idx % 3)}s`} as any}>
                 <div className="sermon-thumb">
-                   <img src="/pastor.jpg" alt={sermon.title} loading="lazy" />
+                   <img src={`${import.meta.env.BASE_URL}pastor.jpg`} alt={sermon.title} loading="lazy" />
                   <div className="sermon-thumb-overlay">
                     <div className="play-btn"><i className="fa-solid fa-play"></i></div>
                   </div>
