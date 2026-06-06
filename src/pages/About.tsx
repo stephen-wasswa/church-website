@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 
 const beliefs = [
   {
@@ -54,11 +54,59 @@ const beliefs = [
   }
 ];
 
+const team = [
+  {
+    name: "Pastor Ruth Nantume",
+    role: "Resident Pastor",
+    desc: "Handles mobile communication for the church and oversees our online giving platforms (MTN: +256 778 815 396 / Airtel: +256 703 989 948).",
+    img: "leader-ruth.jpg"
+  },
+  {
+    name: "Pastor Sam Kakembo",
+    role: "Associate & Creative Arts Pastor",
+    desc: "Leads worship, production, and the creative ministry that amplifies the message of grace to the world.",
+    img: "leader-sam.jpg"
+  },
+  {
+    name: "Dr. Peter Kirabira",
+    role: "Youth Pastor",
+    desc: "Equips the youth and young adults with the truth of grace, empowering a bold and passionate generation.",
+    img: "leader-peter.jpg"
+  },
+  {
+    name: "Dr. Vicky Kirabira",
+    role: "Women & Prayer Pastor",
+    desc: "Guides the women's ministry and prayer teams, supporting women to grow in faith and stand strong in all seasons.",
+    img: "leader-vicky.jpg"
+  },
+  {
+    name: "Mummy Dorothy Kakembo",
+    role: "Children's Ministry Leader",
+    desc: "Creates a safe, joyful environment where children encounter the love of Jesus and learn the Word of God.",
+    img: "leader-dorothy.jpg"
+  },
+  {
+    name: "Mrs. Ocen Mary Nagawa",
+    role: "Church Administrator",
+    desc: "Manages church operations, events, and day-to-day administration to keep the ministry running smoothly.",
+    img: "leader-mary.jpg"
+  }
+];
+
 export default function About() {
   const [activeBelief, setActiveBelief] = useState<number | null>(null);
+  const [activeLeader, setActiveLeader] = useState<number>(0);
 
   const toggleBelief = (idx: number) => {
     setActiveBelief((prev) => (prev === idx ? null : idx));
+  };
+
+  const nextLeader = () => {
+    setActiveLeader((prev) => (prev + 1) % team.length);
+  };
+
+  const prevLeader = () => {
+    setActiveLeader((prev) => (prev - 1 + team.length) % team.length);
   };
   return (
     <>
@@ -191,42 +239,73 @@ export default function About() {
         </div>
       </section>
 
-      {/* PASTORAL TEAM */}
+      {/* PASTORAL TEAM CAROUSEL */}
       <section className="team-section" id="team">
         <div className="team-header reveal">
           <p className="sec-label">Our Pastoral Team</p>
           <h2>Meet the Leadership</h2>
         </div>
-        <div className="team-grid">
-          <div className="team-card reveal">
-            <h4 className="team-name">Pastor Ruth Nantume</h4>
-            <p className="team-role">Resident Pastor</p>
-            <p className="team-desc">Handles mobile communication for the church and oversees our online giving platforms (MTN: +256 778 815 396 / Airtel: +256 703 989 948).</p>
+        
+        <div className="team-carousel-wrapper reveal">
+          <div className="team-carousel-card">
+            <div className="team-carousel-image">
+              <img
+                src={`${import.meta.env.BASE_URL}${team[activeLeader].img}`}
+                alt={team[activeLeader].name}
+                key={activeLeader}
+              />
+            </div>
+            
+            <div className="team-carousel-info">
+              <div className="team-carousel-meta">
+                <span className="team-role-badge">{team[activeLeader].role}</span>
+                <h3 className="team-leader-name">{team[activeLeader].name}</h3>
+              </div>
+              <p className="team-leader-desc">{team[activeLeader].desc}</p>
+              
+              <div className="team-carousel-controls">
+                <button 
+                  onClick={prevLeader} 
+                  className="carousel-btn prev" 
+                  aria-label="Previous leader"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                
+                <div className="carousel-indicators">
+                  {team.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveLeader(idx)}
+                      className={`carousel-dot ${activeLeader === idx ? 'active' : ''}`}
+                      aria-label={`Go to leader ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+                
+                <button 
+                  onClick={nextLeader} 
+                  className="carousel-btn next" 
+                  aria-label="Next leader"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="team-card reveal" style={{'--delay': '0.1s'} as any}>
-            <h4 className="team-name">Pastor Sam Kakembo</h4>
-            <p className="team-role">Associate &amp; Creative Arts Pastor</p>
-            <p className="team-desc">Leads worship, production, and the creative ministry that amplifies the message of grace to the world.</p>
-          </div>
-          <div className="team-card reveal" style={{'--delay': '0.2s'} as any}>
-            <h4 className="team-name">Dr. Peter Kirabira</h4>
-            <p className="team-role">Youth Pastor</p>
-            <p className="team-desc">Equips the youth and young adults with the truth of grace, empowering a bold and passionate generation.</p>
-          </div>
-          <div className="team-card reveal" style={{'--delay': '0.3s'} as any}>
-            <h4 className="team-name">Dr. Vicky Kirabira</h4>
-            <p className="team-role">Women &amp; Prayer Pastor</p>
-            <p className="team-desc">Guides the women's ministry and prayer teams, supporting women to grow in faith and stand strong in all seasons.</p>
-          </div>
-          <div className="team-card reveal" style={{'--delay': '0.4s'} as any}>
-            <h4 className="team-name">Mummy Dorothy Kakembo</h4>
-            <p className="team-role">Children's Ministry Leader</p>
-            <p className="team-desc">Creates a safe, joyful environment where children encounter the love of Jesus and learn the Word of God.</p>
-          </div>
-          <div className="team-card reveal" style={{'--delay': '0.5s'} as any}>
-            <h4 className="team-name">Mrs. Ocen Mary Nagawa</h4>
-            <p className="team-role">Church Administrator</p>
-            <p className="team-desc">Manages church operations, events, and day-to-day administration to keep the ministry running smoothly.</p>
+
+          {/* Quick tab selector for high-end look */}
+          <div className="team-tabs">
+            {team.map((leader, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveLeader(idx)}
+                className={`team-tab-btn ${activeLeader === idx ? 'active' : ''}`}
+              >
+                <span className="tab-btn-name">{leader.name.replace("Pastor ", "").replace("Dr. ", "").replace("Mrs. ", "").replace("Mummy ", "")}</span>
+                <span className="tab-btn-role">{leader.role.split(" & ")[0]}</span>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -254,27 +333,28 @@ export default function About() {
           {beliefs.map((belief, idx) => (
             <div
               key={belief.num}
-              className={`belief-card reveal ${activeBelief === idx ? 'is-active' : ''}`}
-              style={{ '--delay': `${0.06 * idx}s` } as any}
-              onClick={() => toggleBelief(idx)}
+              className="reveal"
+              style={{ '--delay': `${0.06 * idx}s`, display: 'flex', flexDirection: 'column' } as any}
             >
-              <button
-                className="belief-card-toggle"
-                aria-expanded={activeBelief === idx}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleBelief(idx);
-                }}
+              <div
+                className={`belief-card ${activeBelief === idx ? 'is-active' : ''}`}
+                style={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column' }}
               >
-                <div className="belief-card-header-left">
-                  <div className="belief-num">{belief.num}</div>
-                  <h3>{belief.title}</h3>
+                <button
+                  className="belief-card-toggle"
+                  aria-expanded={activeBelief === idx}
+                  onClick={() => toggleBelief(idx)}
+                >
+                  <div className="belief-card-header-left">
+                    <div className="belief-num">{belief.num}</div>
+                    <h3>{belief.title}</h3>
+                  </div>
+                  <ChevronDown className="belief-card-arrow" size={18} />
+                </button>
+                <div className="belief-card-content">
+                  <p>{belief.content}</p>
+                  <span className="belief-ref">{belief.ref}</span>
                 </div>
-                <ChevronDown className="belief-card-arrow" size={18} />
-              </button>
-              <div className="belief-card-content">
-                <p>{belief.content}</p>
-                <span className="belief-ref">{belief.ref}</span>
               </div>
             </div>
           ))}

@@ -282,7 +282,7 @@
 
   /* Per-page background images on pseudo-elements */
   #about-page::before     { background-image: url('/congregation-2.jpg'); }
-  #give-page::before      { background-image: url('/congregation-3.jpg'); }
+  #give-page::before      { background-image: url('/giving.jpg'); }
   #join-us-page::before   { background-image: url('/congregation-1.jpg'); }
   #prayer-page::before    { background-image: url('/congregation-4.jpg'); }
   #ministries-page::before { background-image: url('/community.jpg'); }
@@ -1703,13 +1703,13 @@
 /* --- Hero --- */
 .sermons-hero {
   position: relative;
-  min-height: 480px;
-  max-height: 580px;
+  min-height: 650px;
+  max-height: 800px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   background: var(--black);
-  padding-top: 140px;
+  padding-top: 160px;
   padding-bottom: 1rem;
 }
 
@@ -2549,51 +2549,224 @@
     margin-top: 0.8rem;
   }
 
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+  .team-carousel-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     position: relative;
     z-index: 1;
   }
 
-  .team-card {
+  .team-carousel-card {
+    display: grid;
+    grid-template-columns: 42% 58%;
     background: var(--black-soft);
-    padding: 3rem 2.2rem;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-top: 4px solid var(--maroon);
-    border-radius: 8px;
-    transition: var(--transition-smooth);
-  }
-
-  .team-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(201, 169, 110, 0.2);
+    overflow: hidden;
     box-shadow: var(--shadow-md);
   }
 
-  .team-name {
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.5rem;
+  .team-carousel-image {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    background: var(--grey-dark);
   }
 
-  .team-role {
-    color: var(--gold);
-    font-size: 0.72rem;
+  .team-carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    animation: leaderImgFade 0.4s var(--ease-out) forwards;
+  }
+
+  @keyframes leaderImgFade {
+    from {
+      opacity: 0.4;
+      transform: scale(1.03);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .team-carousel-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .team-role-badge {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    background: rgba(201, 169, 110, 0.08);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    color: var(--gold-light);
+    border-radius: 50px;
+    font-size: 0.68rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: 1.5rem;
+    align-self: flex-start;
   }
 
-  .team-desc {
+  .team-leader-name {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-top: 0.5rem;
+  }
+
+  .team-leader-desc {
     color: var(--cream-dim);
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     line-height: 1.8;
     font-weight: 300;
+  }
+
+  .team-carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    padding: 0;
+  }
+
+  .carousel-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--black);
+    transform: translateY(-2px);
+  }
+
+  .carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot.active {
+    background: var(--gold);
+    width: 22px;
+    border-radius: 4px;
+  }
+
+  .team-tabs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.8rem;
+  }
+
+  .team-tab-btn {
+    background: none;
+    border: 1px solid transparent;
+    padding: 0.8rem 0.4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .team-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .team-tab-btn.active {
+    background: rgba(201, 169, 110, 0.04);
+    border-color: rgba(201, 169, 110, 0.2);
+  }
+
+  .tab-btn-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--cream-dim);
+    transition: color 0.3s ease;
+  }
+
+  .team-tab-btn.active .tab-btn-name {
+    color: var(--gold-light);
+  }
+
+  .tab-btn-role {
+    font-size: 0.6rem;
+    color: var(--grey-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .team-carousel-card {
+      grid-template-columns: 1fr;
+    }
+
+    .team-carousel-image {
+      height: 340px;
+    }
+
+    .team-carousel-info {
+      padding: 2.2rem 1.8rem;
+    }
+
+    .team-leader-name {
+      font-size: 1.75rem;
+    }
+
+    .team-tabs {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 0.6rem;
+      gap: 0.8rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .team-tab-btn {
+      flex-shrink: 0;
+      width: 135px;
+      scroll-snap-align: start;
+      padding: 0.8rem 0.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.04);
+    }
   }
 
 /* ═══════════════════════════════════════════════════════
@@ -4230,17 +4403,21 @@
   }
 
   .belief-card {
-    padding: 1.4rem 1.6rem;
+    padding: 0;
     border-radius: 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .belief-card-toggle {
     cursor: pointer;
+    padding: 1.4rem 1.6rem;
+    width: 100%;
   }
 
   .belief-card-arrow {
     display: block;
+    flex-shrink: 0;
   }
 
   .belief-card.is-active .belief-card-arrow {
@@ -4251,14 +4428,17 @@
     max-height: 0;
     overflow: hidden;
     margin-top: 0;
+    padding: 0 1.6rem;
     opacity: 0;
-    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out, margin-top 0.3s ease;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.3s ease,
+                padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .belief-card.is-active .belief-card-content {
-    max-height: 250px;
+    max-height: 500px;
     opacity: 1;
-    margin-top: 1.2rem;
+    padding: 0 1.6rem 1.4rem;
   }
 }
 
