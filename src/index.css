@@ -286,6 +286,12 @@
   #join-us-page::before   { background-image: url('/congregation-1.jpg'); }
   #prayer-page::before    { background-image: url('/congregation-4.jpg'); }
   #ministries-page::before { background-image: url('/community.jpg'); }
+  #ministries-men-page::before      { background-image: url('/men.jpg'); }
+  #ministries-women-page::before    { background-image: url('/women.jpg'); }
+  #ministries-youth-page::before    { background-image: url('/youth.jpg'); }
+  #ministries-children-page::before { background-image: url('/children.jpg'); }
+  #ministries-worship-page::before  { background-image: url('/choir.jpg'); }
+  #ministries-outreach-page::before { background-image: url('/community.jpg'); }
 
   .page-hero-overlay {
     position: absolute;

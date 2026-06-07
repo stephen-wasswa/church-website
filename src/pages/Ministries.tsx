@@ -83,7 +83,7 @@ export default function Ministries() {
         </div>
 
         <div className="min-grid">
-          <div className="min-card reveal">
+          <Link to="/ministries/men" className="min-card reveal">
             <img src={`${import.meta.env.BASE_URL}men.jpg`} alt="Men's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
@@ -93,9 +93,9 @@ export default function Ministries() {
               <span className="min-card-cta">Join the brotherhood <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
 
-          <div className="min-card reveal" style={{'--delay': '0.07s'} as any}>
+          <Link to="/ministries/women" className="min-card reveal" style={{'--delay': '0.07s'} as any}>
             <img src={`${import.meta.env.BASE_URL}women.jpg`} alt="Women's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
@@ -105,21 +105,21 @@ export default function Ministries() {
               <span className="min-card-cta">Join the sisterhood <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
 
-          <div className="min-card reveal" style={{'--delay': '0.14s'} as any}>
+          <Link to="/ministries/youth" className="min-card reveal" style={{'--delay': '0.14s'} as any}>
             <img src={`${import.meta.env.BASE_URL}youth.jpg`} alt="Youth Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
               <p className="min-card-num">03 · Ministry</p>
-              <h3>Youth &amp; Young Adults</h3>
+              <h3>Youth on Fire</h3>
               <p>A generation being equipped with the truth of grace — bold, passionate young people who know what Jesus did and live like it's true.</p>
               <span className="min-card-cta">Find your generation <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
 
-          <div className="min-card reveal" style={{'--delay': '0.21s'} as any}>
+          <Link to="/ministries/children" className="min-card reveal" style={{'--delay': '0.21s'} as any}>
             <img src={`${import.meta.env.BASE_URL}children.jpg`} alt="Children's Ministry at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
@@ -129,9 +129,9 @@ export default function Ministries() {
               <span className="min-card-cta">Bring your children <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
 
-          <div className="min-card reveal" style={{'--delay': '0.28s'} as any}>
+          <Link to="/ministries/worship" className="min-card reveal" style={{'--delay': '0.28s'} as any}>
             <img src={`${import.meta.env.BASE_URL}choir.jpg`} alt="Worship team at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
@@ -141,9 +141,9 @@ export default function Ministries() {
               <span className="min-card-cta">Join the team <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
 
-          <div className="min-card reveal" style={{'--delay': '0.35s'} as any}>
+          <Link to="/ministries/outreach" className="min-card reveal" style={{'--delay': '0.35s'} as any}>
             <img src={`${import.meta.env.BASE_URL}community.jpg`} alt="Community outreach at Alimunze" className="min-card-img" loading="lazy" />
             <div className="min-card-overlay"></div>
             <div className="min-card-body">
@@ -153,7 +153,7 @@ export default function Ministries() {
               <span className="min-card-cta">Serve with us <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>
-          </div>
+          </Link>
         </div>
 
         <div className="min-view-all reveal" style={{'--delay': '0.2s'} as any}>
