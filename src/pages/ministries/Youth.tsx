@@ -87,17 +87,17 @@ export default function Youth() {
       {/* LEADERSHIP */}
       <section className="pastor-section" id="youth-leadership">
         <div className="pastor-image-col reveal">
-          <img src={`${import.meta.env.BASE_URL}leader-peter.jpg`} alt="Dr. Peter Kirabira — Youth Pastor" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}leader-peter.jpg`} alt="Dr. Peter Kirabira — Youth Pr." loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
           <p className="sec-label">Ministry Leadership</p>
           <h2 className="pastor-name">Dr. Peter Kirabira</h2>
-          <p className="pastor-title-tag">Youth Pastor · Kasenge Miracle Centre Church</p>
+          <p className="pastor-title-tag">Youth Pr. · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "We want our youth to be fire-brands for Jesus — established in grace, secure in their identity, and bold in their witness."
           </blockquote>
           <p className="pastor-bio">
-            Pastor Peter Kirabira leads Youth on Fire with a strong focus on discipleship, biblical literacy, and leadership training. He believes in empowering young people to make a lasting difference in their generation.
+            Pr. Peter Kirabira leads Youth on Fire with a strong focus on discipleship, biblical literacy, and leadership training. He believes in empowering young people to make a lasting difference in their generation.
           </p>
         </div>
       </section>

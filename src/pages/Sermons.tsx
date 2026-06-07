@@ -20,7 +20,7 @@ export default function Sermons() {
     {
       id: "1",
       title: "How to Renew our Love for God",
-      speaker: "Pastor Robinah Ntambi",
+      speaker: "Pr. Robinah Ntambi",
       date: "May 2026",
       series: "Recent",
       description: "Learn practical steps to strengthen your faith, deepen your relationship with God, and live a life filled with His love and grace.",
@@ -29,7 +29,7 @@ export default function Sermons() {
     {
       id: "2",
       title: "Grace Is Enough",
-      speaker: "Pastor Robinah Ntambi",
+      speaker: "Pr. Robinah Ntambi",
       date: "Grace Series",
       series: "Grace",
       description: "You don't earn it. You receive it. The grace of God is the greatest reality in the universe.",
@@ -38,7 +38,7 @@ export default function Sermons() {
     {
       id: "3",
       title: "Believe What He Did",
-      speaker: "Pastor Robinah Ntambi",
+      speaker: "Pr. Robinah Ntambi",
       date: "Faith Series",
       series: "Faith",
       description: "Faith is not a struggle — it is a rest. Rest in what Jesus has already fully accomplished for you.",
@@ -47,7 +47,7 @@ export default function Sermons() {
     {
       id: "4",
       title: "The Power of Rest",
-      speaker: "Pastor Robinah Ntambi",
+      speaker: "Pr. Robinah Ntambi",
       date: "Rest Series",
       series: "Rest",
       description: "Discover how resting in the finished work of Christ unlocks every blessing God has prepared for you.",
@@ -56,7 +56,7 @@ export default function Sermons() {
     {
       id: "5",
       title: "Walking in the Spirit",
-      speaker: "Pastor Robinah Ntambi",
+      speaker: "Pr. Robinah Ntambi",
       date: "Spirit Series",
       series: "Spirit",
       description: "The Holy Spirit is your helper, guide, and comforter. Learn to walk in step with Him daily.",
@@ -88,7 +88,7 @@ export default function Sermons() {
     <>
       <Helmet>
         <title>Watch &amp; Listen — Alimunze · Kasenge Miracle Centre Church</title>
-        <meta name="description" content="Watch &amp; Listen — Sermons from Kasenge Miracle Centre Church (Alimunze). Teachings by Pastor Robinah Ntambi Namutebi available on YouTube and all platforms." />
+        <meta name="description" content="Watch &amp; Listen — Sermons from Kasenge Miracle Centre Church (Alimunze). Teachings by Pr. Robinah Ntambi Namutebi available on YouTube and all platforms." />
       </Helmet>
 
       {/* ═══════════════════════════════════════════
@@ -98,7 +98,7 @@ export default function Sermons() {
         <div className="sermons-hero-bg">
           <img
             src={`${import.meta.env.BASE_URL}pastor-robinah.jpg`}
-            alt="Pastor Robinah preaching at Kasenge Miracle Centre Church"
+            alt="Pr. Robinah preaching at Kasenge Miracle Centre Church"
             loading="eager"
           />
         </div>
@@ -112,7 +112,7 @@ export default function Sermons() {
           </div>
           <h1>Watch &amp;<br /><em>Listen</em></h1>
           <p className="sermons-hero-sub">
-            The Word has no walls. Catch up on teachings from Pastor Robinah — wherever you are in the world.
+            The Word has no walls. Catch up on teachings from Pr. Robinah — wherever you are in the world.
           </p>
           {featured && (
             <div className="sermons-hero-featured">

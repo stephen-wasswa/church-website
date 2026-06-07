@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { publicServiceDays, specialSundays } from "../data/schedule";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [wordIndex, setWordIndex] = useState(0);
+  const [selectedDay, setSelectedDay] = useState<string>("Sunday");
   const words = ["Place to Grow.", "Place to Heal.", "Place to Belong.", "Home."];
   const wrapRef = useRef<HTMLSpanElement>(null);
 
@@ -224,24 +226,24 @@ export default function Home() {
       <section className="pastor-section" id="pastor">
         <div className="pastor-image-col reveal">
           <img src={`${import.meta.env.BASE_URL}pastor-robinah.jpg`}
-            alt="Pastor Robinah Ntambi Namutebi — Senior Pastor and Founder of Kasenge Miracle Centre Church"
+            alt="Pr. Robinah Ntambi Namutebi — Senior Pr. and Founder of Kasenge Miracle Centre Church"
             loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
           <p className="sec-label">Our Leadership</p>
-          <h2 className="pastor-name">Pastor Robinah<br />Ntambi Namutebi</h2>
-          <p className="pastor-title-tag">Senior Pastor &amp; Founder · Kasenge Miracle Centre Church</p>
+          <h2 className="pastor-name">Pr. Robinah<br />Ntambi Namutebi</h2>
+          <p className="pastor-title-tag">Senior Pr. &amp; Founder · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "Our assignment is to lead God's people into an effortless rest — by knowing and believing what Jesus did for
             them instead of struggling in life."
           </blockquote>
           <p className="pastor-bio">
-            Founded in July 1992 under Rubaga Miracle Centre Ministry and commissioned by Pastor Robert Kayanja,
+            Founded in July 1992 under Rubaga Miracle Centre Ministry and commissioned by Pr. Robert Kayanja,
             what began in a small room has grown into a life-transforming church touching generations in Kasenge,
             Wakiso District and beyond.
           </p>
           <Link to="/about" className="btn-primary">
-            Meet Pastor Robinah
+            Meet Pr. Robinah
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
                 strokeLinejoin="round" />
@@ -269,30 +271,62 @@ export default function Home() {
             </Link>
           </div>
           <div className="sth-times reveal" style={{ '--delay': '0.12s' } as any}>
-            <div className="sth-item">
-              <div className="sth-day-block">
-                <span className="sth-day">Sunday</span>
-                <span className="sth-type">Main Service</span>
-              </div>
-              <span className="sth-time">8:00 <small>AM</small></span>
+            <div className="sth-accordion">
+              {publicServiceDays.map((dayData) => {
+                const isOpen = selectedDay === dayData.day;
+                return (
+                  <div key={dayData.day} className={`sth-accordion-item ${isOpen ? "is-open" : ""}`}>
+                    <button
+                      type="button"
+                      className="sth-accordion-header"
+                      onClick={() => setSelectedDay(isOpen ? "" : dayData.day)}
+                    >
+                      <span className="sth-accordion-day">{dayData.day}</span>
+                      <span className="sth-accordion-count">
+                        {dayData.items.length} {dayData.items.length === 1 ? "Service" : "Services"}
+                      </span>
+                    </button>
+                    <div className="sth-accordion-content">
+                      <div className="sth-accordion-inner">
+                        {dayData.items.map((item, idx) => (
+                          <div key={idx} className="sth-item animate-fade">
+                            <div className="sth-day-block">
+                              <span className="sth-time-stamp">{item.time}</span>
+                              <span className="sth-type">{item.title}</span>
+                              {item.description && (
+                                <span className="sth-desc">{item.description}</span>
+                              )}
+                            </div>
+                            {item.leader && (
+                              <span className="sth-leader">
+                                <i className="fa-solid fa-user-tie" style={{ marginRight: '6px', fontSize: '0.8rem', color: 'var(--gold)' }}></i>
+                                {item.leader}
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                        {dayData.day === "Sunday" && (
+                          <div className="sth-special-sundays animate-fade">
+                            <h4>Special Sunday Services</h4>
+                            <ul>
+                              {specialSundays.map((special, idx) => (
+                                <li key={idx}>
+                                  <strong>{special.week}:</strong> {special.theme}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-            <div className="sth-item">
-              <div className="sth-day-block">
-                <span className="sth-day">Wednesday</span>
-                <span className="sth-type">Midweek Bible Study</span>
-              </div>
-              <span className="sth-time">5:00 <small>PM</small></span>
-            </div>
-            <div className="sth-item">
-              <div className="sth-day-block">
-                <span className="sth-day">Friday</span>
-                <span className="sth-type">Prayer &amp; Intercession</span>
-              </div>
-              <span className="sth-time">6:00 <small>PM</small></span>
-            </div>
+            
             <div className="sth-note">
               <i className="fa-solid fa-circle-info" aria-hidden="true"></i>
-              All are welcome. Children's ministry runs during the main service.
+              All are welcome. Children's church runs during the Sunday services.
             </div>
           </div>
         </div>

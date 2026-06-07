@@ -57,9 +57,16 @@ export default function Children() {
               <div className="service-item">
                 <div className="si-left">
                   <span className="si-day">Every Sunday</span>
-                  <span className="si-name">Sunday School (during Main Service)</span>
+                  <span className="si-name">Sunday School (during Luganda Service)</span>
                 </div>
-                <span className="si-time">8:00 AM</span>
+                <span className="si-time">9:00 AM</span>
+              </div>
+              <div className="service-item">
+                <div className="si-left">
+                  <span className="si-day">Every Sunday</span>
+                  <span className="si-name">Sunday School (during English Service)</span>
+                </div>
+                <span className="si-time">11:00 PM</span>
               </div>
               <div className="service-item">
                 <div className="si-left">
@@ -80,12 +87,12 @@ export default function Children() {
       {/* LEADERSHIP */}
       <section className="pastor-section" id="children-leadership">
         <div className="pastor-image-col reveal">
-          <img src={`${import.meta.env.BASE_URL}leader-dorothy.jpg`} alt="Mummy Dorothy Kakembo — Children's Ministry Leader" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}leader-dorothy.jpg`} alt="Mummy Dorothy Kakembo — Children's Pr." loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
           <p className="sec-label">Ministry Leadership</p>
           <h2 className="pastor-name">Mummy Dorothy Kakembo</h2>
-          <p className="pastor-title-tag">Children's Ministry Leader · Kasenge Miracle Centre Church</p>
+          <p className="pastor-title-tag">Children's Pr. · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "Jesus said, 'Let the little children come to me.' We create a space where every child knows they are loved, valued, and welcome."
           </blockquote>

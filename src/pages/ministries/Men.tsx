@@ -57,9 +57,16 @@ export default function Men() {
               <div className="service-item">
                 <div className="si-left">
                   <span className="si-day">Every Tuesday</span>
-                  <span className="si-name">Men's Fellowship &amp; Word Study</span>
+                  <span className="si-name">Men's gathering (SACCO and Prayer) · Pr. Sam &amp; Mr. Ian</span>
                 </div>
                 <span className="si-time">7:00 PM</span>
+              </div>
+              <div className="service-item">
+                <div className="si-left">
+                  <span className="si-day">4th Sunday of the Month</span>
+                  <span className="si-name">Men's Sunday (Praise, worship and the Word)</span>
+                </div>
+                <span className="si-time">Main Service</span>
               </div>
             </div>
           </div>

@@ -63,7 +63,7 @@ export default function Prayer() {
                   </svg>
                 </div>
                 <h4>Request Submitted</h4>
-                <p>Your request has been received. Our prayer partners and Pastor Robinah will stand in agreement with you. Your request is kept strictly confidential.</p>
+                <p>Your request has been received. Our prayer partners and Pr. Robinah will stand in agreement with you. Your request is kept strictly confidential.</p>
                 <button type="button" onClick={() => setSubmitted(false)} className="btn-ghost" style={{ marginTop: '1.5rem' }}>Send another request</button>
               </div>
             ) : (
@@ -73,7 +73,7 @@ export default function Prayer() {
                   <span>Strictly Confidential</span>
                 </div>
                 <h3>How can we pray for you?</h3>
-                <p className="cf-sub-tag">Your prayer request is shared only with our intercessory team and senior pastor.</p>
+                <p className="cf-sub-tag">Your prayer request is shared only with our intercessory team and senior Pr.</p>
  
                 <div className="cf-field">
                   <label htmlFor="pr-name">Your Name *</label>

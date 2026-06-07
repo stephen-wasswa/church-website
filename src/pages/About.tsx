@@ -56,39 +56,45 @@ const beliefs = [
 
 const team = [
   {
-    name: "Pastor Ruth Nantume",
-    role: "Resident Pastor",
-    desc: "Handles mobile communication for the church and oversees our online giving platforms (MTN: +256 778 815 396 / Airtel: +256 703 989 948).",
+    name: "Pr. Ruth Nantume",
+    role: "Resident Pr.",
+    desc: "Manages church operations, events, day-to-day administration, and handles mobile communication and online giving (MTN: +256 778 815 396 / Airtel: +256 703 989 948).",
     img: "leader-ruth.jpg"
   },
   {
-    name: "Pastor Sam Kakembo",
-    role: "Associate & Creative Arts Pastor",
+    name: "Pr. Sam Kakembo",
+    role: "Associate & Creative Arts Pr.",
     desc: "Leads worship, production, and the creative ministry that amplifies the message of grace to the world.",
     img: "leader-sam.jpg"
   },
   {
     name: "Dr. Peter Kirabira",
-    role: "Youth Pastor",
+    role: "Youth Pr.",
     desc: "Equips the youth and young adults with the truth of grace, empowering a bold and passionate generation.",
     img: "leader-peter.jpg"
   },
   {
     name: "Dr. Vicky Kirabira",
-    role: "Women & Prayer Pastor",
+    role: "Women & Prayer Pr.",
     desc: "Guides the women's ministry and prayer teams, supporting women to grow in faith and stand strong in all seasons.",
     img: "leader-vicky.jpg"
   },
   {
+    name: "Dr. Daniel Ntambi",
+    role: "Church Elder",
+    desc: "Husband to the senior Pr. Robinah Ntambi Namutebi, serving as a church elder to provide spiritual guidance, support, and wisdom to the congregation.",
+    img: "leader-dan.jpg"
+  },
+  {
     name: "Mummy Dorothy Kakembo",
-    role: "Children's Ministry Leader",
+    role: "Children's Pr.",
     desc: "Creates a safe, joyful environment where children encounter the love of Jesus and learn the Word of God.",
     img: "leader-dorothy.jpg"
   },
   {
     name: "Mrs. Ocen Mary Nagawa",
-    role: "Church Administrator",
-    desc: "Manages church operations, events, and day-to-day administration to keep the ministry running smoothly.",
+    role: "Church Accountant",
+    desc: "Manages financial records, bookkeeping, and budgeting to support the stewardship and resources of the church.",
     img: "leader-mary.jpg"
   }
 ];
@@ -218,20 +224,20 @@ export default function About() {
       <section className="pastor-section" id="pastor">
         <div className="pastor-image-col reveal">
           <img src={`${import.meta.env.BASE_URL}pastor-robinah.jpg`}
-            alt="Pastor Robinah Ntambi Namutebi — Senior Pastor and Founder, Kasenge Miracle Centre Church"
+            alt="Pr. Robinah Ntambi Namutebi — Senior Pr. and Founder, Kasenge Miracle Centre Church"
             loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{'--delay': '0.2s'} as any}>
           <p className="sec-label">Our Leadership</p>
-          <h2 className="pastor-name">Pastor Robinah<br />Ntambi Namutebi</h2>
-          <p className="pastor-title-tag">Senior Pastor &amp; Founder · Kasenge Miracle Centre Church</p>
+          <h2 className="pastor-name">Pr. Robinah<br />Ntambi Namutebi</h2>
+          <p className="pastor-title-tag">Senior Pr. &amp; Founder · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "Our assignment is to lead God's people into an effortless rest — by knowing and believing what Jesus did for
             them instead of struggling in life. If you understand the finished work of Christ, you can enter the effortless
             rest."
           </blockquote>
           <p className="pastor-bio">
-            The church is led by Pastor Robinah Ntambi Namutebi, who is happily married to Dr. Ntambi Daniel. Founded in July 1992 under Rubaga Miracle Centre Ministry, what began in a small room has grown into a life-transforming church in Kasenge, Wakiso District.
+            The church is led by Pr. Robinah Ntambi Namutebi, who is happily married to Dr. Daniel Ntambi. Founded in July 1992 under Rubaga Miracle Centre Ministry, what began in a small room has grown into a life-transforming church in Kasenge, Wakiso District.
           </p>
           <p className="pastor-bio">
             Her ministry is built on the truth of God's grace — that the debt was fully paid, the sentence fully served, and the battle fully won by Jesus Christ.
@@ -302,7 +308,7 @@ export default function About() {
                 onClick={() => setActiveLeader(idx)}
                 className={`team-tab-btn ${activeLeader === idx ? 'active' : ''}`}
               >
-                <span className="tab-btn-name">{leader.name.replace("Pastor ", "").replace("Dr. ", "").replace("Mrs. ", "").replace("Mummy ", "")}</span>
+                <span className="tab-btn-name">{leader.name.replace("Pastor ", "").replace("Pr. ", "").replace("Dr. ", "").replace("Mrs. ", "").replace("Mummy ", "")}</span>
                 <span className="tab-btn-role">{leader.role.split(" & ")[0]}</span>
               </button>
             ))}

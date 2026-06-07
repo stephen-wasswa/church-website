@@ -57,16 +57,16 @@ export default function Worship() {
               <div className="service-item">
                 <div className="si-left">
                   <span className="si-day">Every Monday</span>
-                  <span className="si-name">Choir Practice &amp; Vocals</span>
+                  <span className="si-name">Choir meeting (Choir practice) · Ms. Nakimera Elizabeth &amp; Mr. Wasswa Stephen</span>
                 </div>
-                <span className="si-time">6:00 PM</span>
+                <span className="si-time">5:00 PM</span>
               </div>
               <div className="service-item">
                 <div className="si-left">
                   <span className="si-day">Every Saturday</span>
-                  <span className="si-name">Main Worship Rehearsals</span>
+                  <span className="si-name">Choir meeting (Choir rehearsals) · Ms. Nakimera Elizabeth &amp; Mr. Wasswa Stephen</span>
                 </div>
-                <span className="si-time">6:00 PM</span>
+                <span className="si-time">5:00 PM</span>
               </div>
               <div className="service-item">
                 <div className="si-left">
@@ -87,17 +87,17 @@ export default function Worship() {
       {/* LEADERSHIP */}
       <section className="pastor-section" id="worship-leadership">
         <div className="pastor-image-col reveal">
-          <img src={`${import.meta.env.BASE_URL}leader-sam.jpg`} alt="Pastor Sam Kakembo — Associate &amp; Creative Arts Pastor" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}leader-sam.jpg`} alt="Pr. Sam Kakembo — Associate &amp; Creative Arts Pr." loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
           <p className="sec-label">Ministry Leadership</p>
-          <h2 className="pastor-name">Pastor Sam Kakembo</h2>
-          <p className="pastor-title-tag">Associate &amp; Creative Arts Pastor · Kasenge Miracle Centre Church</p>
+          <h2 className="pastor-name">Pr. Sam Kakembo</h2>
+          <p className="pastor-title-tag">Associate &amp; Creative Arts Pr. · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "Worship is our response to God's love and grace. We lead the church to see Jesus and exalt His name above all other names."
           </blockquote>
           <p className="pastor-bio">
-            Pastor Sam Kakembo leads the worship and creative arts teams with a heart of service and a standard of excellence. He is passionate about mentoring musicians, vocalists, and production crew, and raising a community that worships in spirit and in truth.
+            Pr. Sam Kakembo leads the worship and creative arts teams with a heart of service and a standard of excellence. He is passionate about mentoring musicians, vocalists, and production crew, and raising a community that worships in spirit and in truth.
           </p>
         </div>
       </section>

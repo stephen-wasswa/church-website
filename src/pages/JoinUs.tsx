@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import { publicServiceDays, specialSundays } from "../data/schedule";
 
 export default function JoinUs() {
+  const [selectedDay, setSelectedDay] = useState<string>("Sunday");
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -63,28 +65,57 @@ export default function JoinUs() {
             <p className="sec-label sec-label--dark">Join Us</p>
             <h2 className="service-heading">Come &amp; worship<br />with us <em>in person.</em></h2>
             <p className="service-intro">Three opportunities every week to gather, worship, and grow together in the Word of God. All are welcome — always.</p>
-            <div className="service-list">
-              <div className="service-item">
-                <div className="si-left">
-                  <span className="si-day">Sunday</span>
-                  <span className="si-name">Services start at</span>
-                </div>
-                <span className="si-time">8:00 AM</span>
-              </div>
-              <div className="service-item">
-                <div className="si-left">
-                  <span className="si-day">Wednesday</span>
-                  <span className="si-name">Midweek Bible Study</span>
-                </div>
-                <span className="si-time">5:00 PM</span>
-              </div>
-              <div className="service-item">
-                <div className="si-left">
-                  <span className="si-day">Friday</span>
-                  <span className="si-name">Prayer &amp; Intercession</span>
-                </div>
-                <span className="si-time">6:00 PM</span>
-              </div>
+            <div className="sth-accordion">
+              {publicServiceDays.map((dayData) => {
+                const isOpen = selectedDay === dayData.day;
+                return (
+                  <div key={dayData.day} className={`sth-accordion-item ${isOpen ? "is-open" : ""}`}>
+                    <button
+                      type="button"
+                      className="sth-accordion-header"
+                      onClick={() => setSelectedDay(isOpen ? "" : dayData.day)}
+                    >
+                      <span className="sth-accordion-day">{dayData.day}</span>
+                      <span className="sth-accordion-count">
+                        {dayData.items.length} {dayData.items.length === 1 ? "Service" : "Services"}
+                      </span>
+                    </button>
+                    <div className="sth-accordion-content">
+                      <div className="sth-accordion-inner">
+                        {dayData.items.map((item, idx) => (
+                          <div key={idx} className="service-item animate-fade" style={{ borderTop: 'none', borderBottom: '1px solid rgba(0, 0, 0, 0.04)', padding: '1.2rem 0' }}>
+                            <div className="si-left">
+                              <span className="si-day" style={{ fontSize: '0.72rem', color: 'var(--maroon)', textTransform: 'uppercase', fontWeight: 700, letterSpacing: '0.05em' }}>{item.time}</span>
+                              <span className="si-day" style={{ fontSize: '0.95rem', color: 'var(--black)', marginTop: '0.15rem' }}>{item.title}</span>
+                              {item.description && (
+                                <span className="si-name">{item.description}</span>
+                              )}
+                            </div>
+                            {item.leader && (
+                              <span className="si-time" style={{ fontSize: '0.78rem', color: 'var(--grey-mid)', fontWeight: 500, alignSelf: 'center', textAlign: 'right' }}>
+                                <i className="fa-solid fa-user-tie" style={{ marginRight: '6px', color: 'var(--accent)' }}></i>
+                                {item.leader}
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                        {dayData.day === "Sunday" && (
+                          <div className="sth-special-sundays animate-fade" style={{ marginTop: '1.5rem', padding: '1.2rem', background: 'rgba(107, 26, 42, 0.03)', borderLeft: '3px solid var(--maroon)', borderRadius: '4px' }}>
+                            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '0.85rem', fontWeight: 700, color: 'var(--maroon)', marginBottom: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Special Sunday Services</h4>
+                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', listStyle: 'none', padding: 0, margin: 0 }}>
+                              {specialSundays.map((special, idx) => (
+                                <li key={idx} style={{ fontSize: '0.8rem', color: 'var(--black)' }}>
+                                  <strong style={{ color: 'var(--maroon)' }}>{special.week}:</strong> {special.theme}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <p style={{fontSize: '0.8rem', color: 'var(--grey-mid)', marginTop: '1.5rem', fontWeight: 300, lineHeight: 1.7}}>
               Kasenge, Wakiso District, Uganda — along Nakawuka Road
@@ -118,11 +149,11 @@ export default function JoinUs() {
         <div className="strip-right">
           <div className="strip-card">
             <p className="card-title">Genuine Worship</p>
-            <p className="card-desc">Expect powerful, Spirit-led worship led by Pastor Sam Kakembo and the Alimunze worship team — a moment to encounter God, not just sing.</p>
+            <p className="card-desc">Expect powerful, Spirit-led worship led by Pr. Sam Kakembo and the Alimunze worship team — a moment to encounter God, not just sing.</p>
           </div>
           <div className="strip-card">
             <p className="card-title">The Word Alive</p>
-            <p className="card-desc">Pastor Robinah brings the Word with clarity and grace. Messages that speak to your real life — practical, faith-filled, and Christ-centred.</p>
+            <p className="card-desc">Pr. Robinah brings the Word with clarity and grace. Messages that speak to your real life — practical, faith-filled, and Christ-centred.</p>
           </div>
           <div className="strip-card">
             <p className="card-title">Warm Community</p>
@@ -175,7 +206,7 @@ export default function JoinUs() {
                   <div className="visit-detail-icon"><i className="fa-solid fa-clock"></i></div>
                   <strong>Service Times</strong>
                 </div>
-                <span>Sunday 8:00 AM · Wednesday 5:00 PM · Friday 6:00 PM</span>
+                <span>Sundays 8:00 AM · Midweek Services (see schedule above)</span>
               </div>
             </div>
           </div>

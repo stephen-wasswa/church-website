@@ -64,7 +64,7 @@ export default function Ministries() {
             <img src={`${import.meta.env.BASE_URL}worship.jpg`} alt="Worship & Praise" className="strip-card-img" loading="lazy" />
             <div className="strip-card-overlay" aria-hidden="true"></div>
             <p className="card-title">Worship &amp; Praise</p>
-            <p className="card-desc">Acknowledging God through song, testimony, obedience, and proclamation — led by Pastor Sam Kakembo.</p>
+            <p className="card-desc">Acknowledging God through song, testimony, obedience, and proclamation — led by Pr. Sam Kakembo.</p>
             <span className="card-link">Psalm 150</span>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Ministries() {
             <div className="min-card-body">
               <p className="min-card-num">05 · Ministry</p>
               <h3>Worship &amp; Creative Arts</h3>
-              <p>Led by Pastor Sam Kakembo — a worship community that uses music, media, and creative expression to exalt the name of Jesus.</p>
+              <p>Led by Pr. Sam Kakembo — a worship community that uses music, media, and creative expression to exalt the name of Jesus.</p>
               <span className="min-card-cta">Join the team <i className="fa-solid fa-arrow-right" style={{fontSize: '0.6rem'}}></i></span>
             </div>
             <div className="min-card-bar"></div>

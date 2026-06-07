@@ -56,17 +56,24 @@ export default function Women() {
             <div className="service-list">
               <div className="service-item">
                 <div className="si-left">
+                  <span className="si-day">Every Friday</span>
+                  <span className="si-name">Prayer &amp; Intercession (Praying for church needs) · Pr. Victoria</span>
+                </div>
+                <span className="si-time">6:00 PM</span>
+              </div>
+              <div className="service-item">
+                <div className="si-left">
                   <span className="si-day">Every Saturday</span>
-                  <span className="si-name">Women's Prayer Groups</span>
+                  <span className="si-name">Intercessors' Meeting (Intercession) · Pr. Victoria</span>
                 </div>
                 <span className="si-time">5:00 PM</span>
               </div>
               <div className="service-item">
                 <div className="si-left">
-                  <span className="si-day">Annually</span>
-                  <span className="si-name">Women's Day Celebration</span>
+                  <span className="si-day">4th Sunday of the Month</span>
+                  <span className="si-name">Women's Sunday (Praise, worship and the Word)</span>
                 </div>
-                <span className="si-time">Full Day</span>
+                <span className="si-time">Main Service</span>
               </div>
             </div>
           </div>
@@ -80,17 +87,17 @@ export default function Women() {
       {/* LEADERSHIP */}
       <section className="pastor-section" id="women-leadership">
         <div className="pastor-image-col reveal">
-          <img src={`${import.meta.env.BASE_URL}leader-vicky.jpg`} alt="Dr. Vicky Kirabira — Women &amp; Prayer Pastor" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}leader-vicky.jpg`} alt="Dr. Vicky Kirabira — Women &amp; Prayer Pr." loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
           <p className="sec-label">Ministry Leadership</p>
           <h2 className="pastor-name">Dr. Vicky Kirabira</h2>
-          <p className="pastor-title-tag">Women &amp; Prayer Pastor · Kasenge Miracle Centre Church</p>
+          <p className="pastor-title-tag">Women &amp; Prayer Pr. · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
             "We are called to stand strong, pray without ceasing, and declare the glory of God in our families, careers, and community."
           </blockquote>
           <p className="pastor-bio">
-            Pastor Vicky Kirabira guides the Women's Ministry and prayer groups. She has a deep burden for prayer and raising a generation of women who understand their standing in Christ, walk in authority, and support one another in love.
+            Pr. Vicky Kirabira guides the Women's Ministry and prayer groups. She has a deep burden for prayer and raising a generation of women who understand their standing in Christ, walk in authority, and support one another in love.
           </p>
         </div>
       </section>
