@@ -8,7 +8,19 @@ export default function Layout() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -25,7 +37,7 @@ export default function Layout() {
     return () => {
       revealElements.forEach(el => observer.unobserve(el));
     };
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <>

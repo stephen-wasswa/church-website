@@ -66,7 +66,7 @@ export default function Children() {
                   <span className="si-day">Every Sunday</span>
                   <span className="si-name">Sunday School (during English Service)</span>
                 </div>
-                <span className="si-time">11:00 PM</span>
+                <span className="si-time">11:00 AM</span>
               </div>
               <div className="service-item">
                 <div className="si-left">

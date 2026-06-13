@@ -186,14 +186,13 @@ export default function About() {
           <p className="sec-label reveal">Our Background</p>
           <h2 className="reveal" style={{'--delay': '0.1s'} as any}>From a <span>small room</span><br />to a movement.</h2>
           <p className="reveal" style={{'--delay': '0.2s'} as any}>
-            Kasenge Miracle Centre Church — known lovingly as <em>"Alimunze"</em> — was birthed under Rubaga Miracle Centre
-            Ministry with Pastor Robinah Ntambi Namutebi as its Senior Pastor and Founder. The church was commissioned by
-            Pastor Robert Kayanja of Rubaga Miracle Centre Cathedral in Kampala.
+            Kasenge Miracle Centre Church — known lovingly as <em>"Alimunze"</em> — was founded by Pastor Robinah Ntambi Namutebi 
+            as its Senior Pastor and Founder. The church started in July 1992, first in a small room, which later grew into 
+            a 30-seater grass-thatched reed shelter in the village of Kasenge, Wakiso District.
           </p>
           <p className="reveal" style={{'--delay': '0.3s'} as any}>
-            The church that we now call home started in July 1992, first in a small room, then a 30-seater grass-thatched
-            reed shelter in the far-flung village of Kasenge, Wakiso District. What began in humble surroundings has grown
-            into a life-transforming community rooted in the finished work of Christ.
+            What began in humble surroundings has grown into a life-transforming community rooted in the finished work of Christ. 
+            Years after the church was fully built, Pastor Robert Kayanja came to officially open the completed church building.
           </p>
         </div>
         <div className="strip-right">
@@ -228,19 +227,20 @@ export default function About() {
             loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{'--delay': '0.2s'} as any}>
-          <p className="sec-label">Our Leadership</p>
+          <p className="sec-label">The Vision Bearer</p>
           <h2 className="pastor-name">Pr. Robinah<br />Ntambi Namutebi</h2>
           <p className="pastor-title-tag">Senior Pr. &amp; Founder · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
-            "Our assignment is to lead God's people into an effortless rest — by knowing and believing what Jesus did for
-            them instead of struggling in life. If you understand the finished work of Christ, you can enter the effortless
-            rest."
+            "I heard a voice telling me that I should go to Kasenge to proclaim Jesus. The city of Kasenge was full of darkness, and I needed to take Jesus Christ there and bring light in that community. I obeyed, went to the community, and spoke the word of truth to that community in 1992."
+            <span style={{ display: 'block', marginTop: '8px', fontSize: '0.75rem', color: 'var(--gold)', letterSpacing: '0.05em' }}>
+              — Matthew 11:28 &amp; Luke 19:9
+            </span>
           </blockquote>
           <p className="pastor-bio">
-            The church is led by Pr. Robinah Ntambi Namutebi, who is happily married to Dr. Daniel Ntambi. Founded in July 1992 under Rubaga Miracle Centre Ministry, what began in a small room has grown into a life-transforming church in Kasenge, Wakiso District.
+            The church is led by Pr. Robinah Ntambi Namutebi, who is happily married to Dr. Daniel Ntambi. Obeying a vision in 1992 to bring the gospel to a community in darkness, what began in a small room has grown into a beacon of grace in Kasenge, Wakiso District.
           </p>
           <p className="pastor-bio">
-            Her ministry is built on the truth of God's grace — that the debt was fully paid, the sentence fully served, and the battle fully won by Jesus Christ.
+            Her ministry is built on the truth of God's grace — that the debt was fully paid, the sentence fully served, and the battle fully won by Jesus Christ. The completed church building was officially opened years later by Pastor Robert Kayanja.
           </p>
         </div>
       </section>
@@ -376,7 +376,7 @@ export default function About() {
           <h2>Come experience<br /><em>Alimunze</em> in person.</h2>
           <p>Every Sunday is a fresh start. We have been expecting you — and there is a seat here with your name on it.</p>
           <div className="cta-buttons">
-            <Link to="/give" className="btn-primary">
+            <Link to="/join-us" className="btn-primary">
               Plan My Visit
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

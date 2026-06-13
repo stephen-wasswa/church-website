@@ -80,7 +80,7 @@ export default function Home() {
             <em>You are enough.</em>
           </p>
           <div className="hero-ctas">
-            <Link to="/give" className="btn-primary">
+            <Link to="/join-us" className="btn-primary">
               I'm New — Plan My Visit
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
@@ -132,7 +132,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="strip-right">
-          <Link to="/give" className="strip-card">
+          <Link to="/join-us" className="strip-card">
             <p className="card-title">First Time Here?</p>
             <p className="card-desc">We'd love to welcome you. Here's what to expect on your first Sunday at Alimunze.</p>
             <span className="card-link">Plan your visit <i className="fa-solid fa-arrow-right" style={{fontSize: '0.5rem'}}
@@ -145,7 +145,7 @@ export default function Home() {
             <span className="card-link">Browse sermons <i className="fa-solid fa-arrow-right" style={{fontSize: '0.5rem'}}
                 aria-hidden="true"></i></span>
           </Link>
-          <Link to="/about" className="strip-card">
+          <Link to="/ministries" className="strip-card">
             <p className="card-title">Get Involved</p>
             <p className="card-desc">Men, women, youth, children — there's a vibrant community here for every season of life.
             </p>
@@ -230,7 +230,7 @@ export default function Home() {
             loading="lazy" />
         </div>
         <div className="pastor-text-col reveal" style={{ '--delay': '0.2s' } as any}>
-          <p className="sec-label">Our Leadership</p>
+          <p className="sec-label">The Vision Bearer</p>
           <h2 className="pastor-name">Pr. Robinah<br />Ntambi Namutebi</h2>
           <p className="pastor-title-tag">Senior Pr. &amp; Founder · Kasenge Miracle Centre Church</p>
           <blockquote className="pastor-quote">
@@ -238,11 +238,10 @@ export default function Home() {
             them instead of struggling in life."
           </blockquote>
           <p className="pastor-bio">
-            Founded in July 1992 under Rubaga Miracle Centre Ministry and commissioned by Pr. Robert Kayanja,
-            what began in a small room has grown into a life-transforming church touching generations in Kasenge,
-            Wakiso District and beyond.
+            In 1992, Pastor Robinah Ntambi Namutebi obeyed a divine calling to bring the light of Jesus Christ to Kasenge. 
+            Preaching the word of truth, she started a ministry that has built, repaired, and restored lives across generations.
           </p>
-          <Link to="/about" className="btn-primary">
+          <Link to="/about#pastor" className="btn-primary">
             Meet Pr. Robinah
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
@@ -262,7 +261,7 @@ export default function Home() {
             <p className="sth-sub reveal" style={{ '--delay': '0.16s' } as any}>
               Kasenge, along Nakawuka Road<br />Wakiso District, Uganda
             </p>
-            <Link to="/give" className="btn-primary reveal" style={{ '--delay': '0.24s' } as any}>
+            <Link to="/join-us" className="btn-primary reveal" style={{ '--delay': '0.24s' } as any}>
               Plan My Visit
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
@@ -386,7 +385,7 @@ export default function Home() {
             We have been expecting you, and we are ready to walk with you every step of the way.
           </p>
           <div className="cta-action-row">
-            <Link to="/give" className="cta-action-card">
+            <Link to="/join-us" className="cta-action-card">
               <div className="cac-icon"><i className="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
               <span className="cac-label">Plan My Visit</span>
               <span className="cac-sub">Join us this Sunday</span>
