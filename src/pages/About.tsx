@@ -93,10 +93,11 @@ const team = [
   },
   {
     name: "Mrs. Ocen Mary Nagawa",
-    role: "Church Accountant",
-    desc: "Manages financial records, bookkeeping, and budgeting to support the stewardship and resources of the church.",
+    role: "Church Administrator",
+    desc: "Serves as the primary Church Administrator working closely with the Resident Pastor to manage operations and day-to-day coordination, while also overseeing financial administration.",
     img: "leader-mary.jpg"
-  }
+  },
+
 ];
 
 export default function About() {
@@ -300,19 +301,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Quick tab selector for high-end look */}
-          <div className="team-tabs">
-            {team.map((leader, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveLeader(idx)}
-                className={`team-tab-btn ${activeLeader === idx ? 'active' : ''}`}
-              >
-                <span className="tab-btn-name">{leader.name.replace("Pastor ", "").replace("Pr. ", "").replace("Dr. ", "").replace("Mrs. ", "").replace("Mummy ", "")}</span>
-                <span className="tab-btn-role">{leader.role.split(" & ")[0]}</span>
-              </button>
-            ))}
-          </div>
+
         </div>
       </section>
 
